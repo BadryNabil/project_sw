@@ -7,27 +7,19 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
-  <link rel="stylesheet" href="http://localhost/projects/sa_project/public/adminlte/plugins/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="http://localhost/projects/sa_project/public/adminlte/css/jquery-confirm.css">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="http://localhost/projects/sa_project/public/adminlte/plugins/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{{asset('adminlte/plugins/bootstrap/dist/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('adminlte/plugins/font-awesome/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{asset('adminlte/plugins/Ionicons/css/ionicons.min.css')}}">
+    <link rel="stylesheet" href="{{asset('adminlte/css/skins/_all-skins.min.css')}}">
+
+
+  <link rel="stylesheet" href="{{asset('adminlte/css/jquery-confirm.css')}}">
+
+  
   <!-- Ionicons -->
-  <link rel="stylesheet" href="http://localhost/projects/sa_project/public/adminlte/plugins/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="{{asset('adminlte/plugins/Ionicons/css/ionicons.min.css')}}">
   <!-- Theme style -->
-  <link rel="stylesheet" href="http://localhost/projects/sa_project/public/adminlte/css/AdminLTE.min.css">
-  <!-- AdminLTE Skins. Choose a skin from the css/skins
-       folder instead of downloading all of them to reduce the load. -->
-  <link rel="stylesheet"  href="http://localhost/projects/sa_project/public/adminlte/css/skins/_all-skins.min.css">
-
-
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
-
-  <!-- Google Font -->
+  <link rel="stylesheet" href="{{asset('adminlte/css/AdminLTE.min.css')}}">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
@@ -57,16 +49,18 @@
 
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
-            <li class="user-footer">
-                <div class="pull-right" style="padding-right: 50px ; padding-top: 10px">
-                  <a href="{{ url('logout') }}" class="btn btn-success">Sign out</a>
+            <ul >
+             <li class="user-footer" style="padding-right: 40px; padding-top: 5px">
+                <div class="pull-right">
+                  <a href="{{ url('logout') }}" class="btn btn-warning btn-flat">Sign out</a>
                 </div>
               </li>
             </ul>
           </li>
           <!-- Control Sidebar Toggle Button  -->
-
-          
+          <li>
+            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -94,10 +88,13 @@
 
           <ul class="treeview-menu">
 
-        </ul>
-          <li><a href="{{url(route('home'))}}"><i class="fa fa-home"></i> <span>Home</span></a></li>
-         <li><a href="{{url(route('students.index'))}}"><i class="fa fa-users"></i> <span>Student</span></a></li>
-       </ul>
+          </ul>
+           <li><a href="{{url(route('home'))}}"><i class="fa fa-home"></i> <span>Home</span></a></li>
+      <li><a href="{{url(route('students.index'))}}"><i class="fa fa-users"></i> <span>Student</span></a></li>
+     
+
+
+      </ul>
     </section>
     <!-- /.sidebar -->
   </aside>
@@ -113,13 +110,20 @@
       </h1>
       <ol class="breadcrumb">
         <li><a href="{{url('/home')}}"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Blank page</li>
       </ol>
     </section>
    @yield('content')
   </div>
 
 
-  
+  <footer class="main-footer">
+    <div class="pull-right hidden-xs">
+      <b>Version</b> 2.4.0
+    </div>
+    <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
+    reserved.
+  </footer>
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
@@ -318,19 +322,20 @@
 </div>
 <!-- ./wrapper -->
 
-<!-- jQuery 3 -->
-<script src= " http://localhost/projects/sa_project/public/adminlte/plugins/jQuery/dist/jQuery.min.js"></script>
-<script src= " http://localhost/projects/sa_project/public/adminlte/js/jquery-confirm.js"></script>
-<!-- Bootstrap 3.3.4 -->
-<script src="http://localhost/projects/sa_project/public/adminlte/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
-<!-- SlimScroll -->
-<script src="http://localhost/projects/sa_project/public/adminlte/plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-<!-- FastClick -->
-<script src="http://localhost/projects/sa_project/public/adminlte/plugins/fastclick/lib/fastclick.js"></script>
-<!-- AdminLTE App -->
-<script src="http://localhost/projects/sa_project/public/adminlte/js/adminlte.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="http://localhost/projects/sa_project/public/adminlte/js/demo.js"></script>
+<script src="{{asset('adminlte/plugins/jquery/dist/jquery.min.js')}}"></script>
+
+<script src="{{asset('adminlte/js/jquery-confirm.js')}}"></script>
+
+
+<script src="{{asset('adminlte/plugins/bootstrap/dist/js/bootstrap.min.js')}}"></script>
+
+<script src="{{asset('adminlte/plugins/jquery-slimscroll/jquery.slimscroll.min.js')}}"></script>
+
+<script src="{{asset('adminlte/plugins/fastclick/lib/fastclick.js')}}"></script>
+
+<script src="{{asset('adminlte/js/adminlte.min.js')}}"></script>
+
+<script src="{{asset('adminlte/js/demo.js')}}"></script>
 <script>
   $(document).ready(function () {
     $('.sidebar-menu').tree()

@@ -9,6 +9,6 @@ class College extends Model
 
     protected $table = 'college';
     public $timestamps = true;
-    protected $fillable = array('name', 'grade', 'body', 'university' ,'department','image');
+    protected $fillable = array('name', 'grade', 'body', 'university' ,'department');
 
 }

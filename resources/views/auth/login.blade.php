@@ -35,7 +35,7 @@
     <div class="login-logo">
         <a href="{{url('/')}}">{{config('app.name')}}</a>
     </div>
-    <!-- /.login-logo -->
+
     <div class="login-box-body">
         <p class="login-box-msg">قم بتسجيل الدخول</p>
 
@@ -53,17 +53,17 @@
                 <input type="password" class="form-control" placeholder="كلمة المرور" required="" name="password">
                 @if ($errors->has('password'))
                     <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
+                     <strong>{{ $errors->first('password') }}</strong>
+                    </span>
                 @endif
             </div>
             <button type="submit" class="btn btn-primary btn-block btn-flat">تسجيل الدخول</button>
         </form>
-
-        {{--<a href="#">I forgot my password</a><br>--}}
-
     </div>
-    <!-- /.login-box-body -->
+        
+
+
+
 </div>
 <!-- /.login-box -->
 

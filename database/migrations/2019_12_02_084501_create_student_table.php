@@ -12,7 +12,7 @@ class CreateStudentTable extends Migration {
 			$table->timestamps();
 			$table->string('username');
 			$table->string('password');
-			$table->integer('pin_code');
+			$table->string('api_token',60)->unique()->nullable();
 			$table->string('email');
 			$table->string('phone');
 			$table->string('city');

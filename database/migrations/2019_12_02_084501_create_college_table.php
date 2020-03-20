@@ -12,8 +12,11 @@ class CreateCollegeTable extends Migration {
 			$table->timestamps();
 			$table->string('name', 200);
 			$table->integer('grade');
-			$table->text('body');
 			$table->string('university');
+			$table->text('body');
+			$table->string('department');
+			$table->integer('number_of_student')->nullable();
+			$table->text('image')->nullable();
 		});
 	}
 
