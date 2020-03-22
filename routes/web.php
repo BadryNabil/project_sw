@@ -23,4 +23,6 @@ Route::get('logout',function () {
 Auth::routes();
 Route::get('/', 'HomeController@index')->name('home');
 Route::resource('students','StudentController');
-
+Route::resource('users','UserController');
+Route::get('change-password','UserController@resetPassword');
+Route::post('change-password','UserController@resetPasswordSave');

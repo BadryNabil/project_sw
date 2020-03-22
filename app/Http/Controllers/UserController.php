@@ -3,25 +3,53 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Student;
+use App\User;
+use Hash;
+use Auth;
 
-class StudentController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+    public function resetPassword()
+     {
+       return view('users.reset-password');
+     }
+
+     public function resetPasswordSave(Request $request)
+     {
+       $this->validate($request, [
+            
+            'old-password'    => 'required',
+            'password'        => 'required|confirmed',
+
+        ]);
+
+        $user = Auth::user();
+
+
+        if (Hash::check($request->input('old-password') ,$user->password)) {
+          $user->password = bcrypt($request->input('password'));
+          $user->save();
+       
+            return view('users.reset-password');
+        }else{
+            
+            return view('users.reset-password');
+        }
+      }
+
 
     public function index()
     {
-        $studentFilter=Student::paginate(10);
-        return view('students.index',compact('studentFilter'));
+
+        $users=User::paginate(20);
+        return view('users.index')->with('users',$users);
     }
-    
 
-
-    
     /**
      * Show the form for creating a new resource.
      *
@@ -29,7 +57,7 @@ class StudentController extends Controller
      */
     public function create()
     {
-        //
+       
     }
 
     /**
@@ -40,7 +68,7 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      
     }
 
     /**
@@ -62,7 +90,8 @@ class StudentController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::findOrFail($id);
+        return view('users.edit',compact('user'));
     }
 
     /**
@@ -74,7 +103,17 @@ class StudentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $this->validate($request, [
+           'name'        => 'required',
+           'email'       => 'email',
+           'phone'       =>'required'
+           
+       ]);
+        $record = User::findOrFail($id);
+        $record->update($request->all());
+        return redirect(route('users.index',$record->id));
+
+
     }
 
     /**
@@ -85,8 +124,7 @@ class StudentController extends Controller
      */
     public function destroy($id)
     {
-        $record=Student::findOrFail($id);
-        $record->delete();
-        return back();
+      
+      
     }
 }

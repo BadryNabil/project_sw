@@ -90,8 +90,10 @@
 
           </ul>
            <li><a href="{{url(route('home'))}}"><i class="fa fa-home"></i> <span>Home</span></a></li>
-      <li><a href="{{url(route('students.index'))}}"><i class="fa fa-users"></i> <span>Student</span></a></li>
-     
+           <li><a href="{{url(route('students.index'))}}"><i class="fa fa-users"></i> <span>Student</span></a></li>
+           <li><a href="{{url(route('users.index'))}}"><i class="fa fa-user-circle"></i> <span>Admin Profile</span></a></li>
+           <li><a href="{{url('change-password')}}"><i class="fa fa-edit"></i> <span>Reset Password</span></a></li>
+
 
 
       </ul>
