@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 20, 2020 at 02:49 PM
+-- Generation Time: Mar 30, 2020 at 07:36 PM
 -- Server version: 10.3.16-MariaDB
 -- PHP Version: 7.3.6
 
@@ -56,6 +56,14 @@ CREATE TABLE `contacts` (
   `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `message` text COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `contacts`
+--
+
+INSERT INTO `contacts` (`id`, `created_at`, `updated_at`, `name`, `phone`, `email`, `message`) VALUES
+(6, NULL, NULL, 'ahmed', '01153328857', 'badry@mail.com', 'شغل عالى'),
+(7, NULL, NULL, 'بدرى', '01153328857', 'badry@mail.com', 'good work');
 
 -- --------------------------------------------------------
 
@@ -135,7 +143,7 @@ CREATE TABLE `student` (
 --
 
 INSERT INTO `student` (`id`, `created_at`, `updated_at`, `username`, `password`, `api_token`, `email`, `phone`, `city`) VALUES
-(2, NULL, NULL, 'badry', '12345678', NULL, 'badry@gmail.com', '01153328857', 'cairo\r\n');
+(5, NULL, NULL, 'badry', '12345678', NULL, 'badrynabil7@gmail.com', '01153328857', 'cairo\r\n');
 
 -- --------------------------------------------------------
 
@@ -160,7 +168,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `phone`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'badry', 'badrynabil7@gmail.com', NULL, '$2y$10$9mVYTIONGzZuUdn3M4n41e/nh/vxlKGO/x3OEiCiJMlkRPF5Yi3Wa', NULL, NULL, '2020-03-20 11:20:41', '2020-03-20 11:20:41');
+(1, 'badry', 'badrynabil7@gmail.com', NULL, '$2y$10$9mVYTIONGzZuUdn3M4n41e/nh/vxlKGO/x3OEiCiJMlkRPF5Yi3Wa', '01153328857', NULL, '2020-03-20 11:20:41', '2020-03-22 16:51:11'),
+(10, 'Ahmed', 'admin@test.com', NULL, '$2y$10$TaVRYu2ltKea.hR0Zf/k8uArZGobVZCFMPVwfOsBhhifDxLi9mG5e', '01153328857', NULL, '2020-03-26 15:38:03', '2020-03-26 15:38:03');
 
 --
 -- Indexes for dumped tables
@@ -224,7 +233,7 @@ ALTER TABLE `college`
 -- AUTO_INCREMENT for table `contacts`
 --
 ALTER TABLE `contacts`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -242,13 +251,13 @@ ALTER TABLE `settings`
 -- AUTO_INCREMENT for table `student`
 --
 ALTER TABLE `student`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
