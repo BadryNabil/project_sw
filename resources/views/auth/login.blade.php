@@ -61,7 +61,7 @@
         </form>
     </div>
         
-
+ <a href="{{url('/register')}}"><button type="submit" class="btn btn-primary btn-block btn-flat">تسجيل  مستخدم جديد</button></a>
 
 
 </div>
