@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{config('app.name')}}</title>
+    <title>college-admission-predictor</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
@@ -24,15 +24,15 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 <body class="hold-transition login-page">
+<div class="login-box">
+    <div class="login-logo">
+        <a href="{{url('/')}}">college-admission-predictor</a>
+    </div>
 
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+    <div class="login-box-body">
+        
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+        <form method="POST" action="{{ route('register') }}">
                         @csrf
 
                         <div class="form-group row">
@@ -101,16 +101,16 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
-                                </button>
+                                <button type="submit" class="btn btn-primary btn-block btn-flat">Register</button>
                             </div>
                         </div>
                     </form>
-                </div>
-            </div>
-        </div>
+
     </div>
+        
+ 
+
+
 </div>
 
 <!-- jQuery 3 -->
@@ -130,7 +130,6 @@
 </script>
 </body>
 </html>
-
 
 
 

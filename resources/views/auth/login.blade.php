@@ -57,11 +57,11 @@
                     </span>
                 @endif
             </div>
-            <button type="submit" class="btn btn-primary btn-block btn-flat">تسجيل الدخول</button>
+            <button type="submit" class="btn btn-primary btn-block btn-flat">Login</button>
         </form>
     </div>
         
- <a href="{{url('/register')}}"><button type="submit" class="btn btn-success btn-block btn-flat">تسجيل  مستخدم جديد</button></a>
+ <a href="{{url('/register')}}"><button type="submit" class="btn btn-success btn-block btn-flat">Register</button></a>
 
 
 </div>
