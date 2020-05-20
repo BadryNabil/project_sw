@@ -93,6 +93,8 @@
            <li><a href="{{url(route('students.index'))}}"><i class="fa fa-users"></i> <span>Student</span></a></li>
            <li><a href="{{url(route('colleges.index'))}}"><i class="fa fa-university"></i> <span>College</span></a></li>
            <li><a href="{{url(route('contacts.index'))}}"><i class="fa fa-envelope"></i> <span>FeedBack</span></a></li>
+            <li><a href="{{url(route('settings.index'))}}"><i class="fa fa-cog"></i> <span>Settings</span></a></li>
+
            <li><a href="{{url(route('users.index'))}}"><i class="fa fa-user-circle"></i> <span>Admin Profile</span></a></li>
            <li><a href="{{url('change-password')}}"><i class="fa fa-edit"></i> <span>Reset Password</span></a></li>
 
