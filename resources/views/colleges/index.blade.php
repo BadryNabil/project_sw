@@ -38,6 +38,8 @@ College
               <th class="text-center">Image</th>
               <th class="text-center">Predicted Number</th>
               <th class="text-center">University</th>
+               <th class="text-center">Edit</th>
+              <th class="text-center">Delete</th>
               
             </tr>
           </thead>
@@ -51,6 +53,17 @@ College
                 <td class="text-center">{{$record->image}}</td>
                 <td class="text-center">{{$record->student}}</td>
                 <td class="text-center">{{$record->university}}</td>
+                  <td class="text-center">
+                  <a href="{{url(route('colleges.edit',$record->id))}}" class="btn btn-success" ><i class="fa fa-edit"></i></a>
+                </td>
+                <td class="text-center">
+                  {!!Form::open([
+                    'action' => ['CollegeController@destroy',$record->id],
+                    'method' =>'delete'
+                    ]) !!}
+                  <button type="submit" class="btn btn-danger" ><i class="fa fa-trash"></i></button>
+                  {!!Form::close() !!}
+                </td>
               
 
                 

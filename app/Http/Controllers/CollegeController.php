@@ -92,7 +92,8 @@ class CollegeController extends Controller
      */
     public function edit($id)
     {
-      
+      $model=College::findOrFail($id);
+      return view('colleges.edit',compact('model'));
     }
 
     /**
@@ -104,7 +105,19 @@ class CollegeController extends Controller
      */
     public function update(Request $request, $id)
     {
-      
+      $record = College::findOrFail($id);
+      $record->update($request->all());
+      if ($request->hasFile('image'))
+            {
+            $image = $request->file('image');
+            $destinationPath = public_path().'/uploads/colleges/images/';
+            $extension = $image->getClientOriginalExtension(); // getting image extension
+            $name = time().''.rand(11111,99999).'.'.$extension; // renameing image
+            $image->move($destinationPath, $name); // uploading file to given
+            $record->image = 'uploads/colleges/images/'.$name;
+            $record->save();
+          }
+      return redirect(route('colleges.index',$record->id));
     }
 
     /**
@@ -115,6 +128,10 @@ class CollegeController extends Controller
      */
      public function destroy($id)
        {
+
+           $record = College::findOrFail($id);
+           $record->delete();
+           return back();
            
         }
 
