@@ -11,7 +11,12 @@
 |
 */
 
+Route::group(['namespace' => 'Front'] ,function(){
+  Route::get('/','MainController@home');
+  
 
+
+});
 
 
 
@@ -21,7 +26,7 @@ Route::get('logout',function () {
 });
 
 Auth::routes();
-Route::get('/', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('students','StudentController');
 Route::resource('users','UserController');
 Route::resource('contacts' ,'feedbackController');

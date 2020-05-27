@@ -97,6 +97,7 @@
 
            <li><a href="{{url(route('users.index'))}}"><i class="fa fa-user-circle"></i> <span>Admin Profile</span></a></li>
            <li><a href="{{url('change-password')}}"><i class="fa fa-edit"></i> <span>Reset Password</span></a></li>
+        <li><a href="{{url('/')}}"><i class="fa fa-backward"></i> <span>Back To APP</span></a></li>
 
 
 

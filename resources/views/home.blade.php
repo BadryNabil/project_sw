@@ -11,40 +11,67 @@
 @endsection
 @section('content')
     <!-- Main content -->
-    <section class="content">
-        <div class="row">
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="info-box">
-                    <span class="info-box-icon bg-aqua"><i class="fa fa-user"></i></span>
+   
+        
+            <div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div>
+                <div class="panel-body">
+                        <div class="row">
+                                <div class="col-lg-4 col-xs-6">
+                                  <!-- small box -->
+                                  <div class="small-box bg-aqua">
+                                    <div class="inner">
+                                        <h3>Students</h3>
+                                        <p>{{$student->count()}}</p>
+                                    </div>
+                                    <div class="icon">
+                                      <i class="fa fa-users"></i>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- ./col -->
+                                <div class="col-lg-4 col-xs-6">
+                                  <!-- small box -->
+                                  <div class="small-box bg-green">
+                                    <div class="inner">
+                                        <h3>Colleges</h3>
+                                        <p>{{$college->count()}}</p>
+                                    </div>
+                                    <div class="icon">
+                                      <i class="fa fa-university"></i>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- ./col -->
+                                <div class="col-lg-4 col-xs-6">
+                                  <!-- small box -->
+                                  <div class="small-box bg-red">
+                                    <div class="inner">
+                                        <h3>FeedBack</h3>
+                                        <p>{{$college->count()}}</p>
+                                    </div>
+                                    <div class="icon">
+                                      <i class="fa fa-envelope"></i>
+                                    </div>
+                                  </div>
+                                </div>
 
-                    <div class="info-box-content">
-                        <span class="info-box-text">Students</span>
-                        <span class="info-box-number">{{$student->count()}}</span>
-                    </div>
-                    <!-- /.info-box-content -->
+                                
+                               
+                              </div>
                 </div>
-                <!-- /.info-box -->
             </div>
-            
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="info-box">
-                    <span class="info-box-icon bg-green"><i class="fa fa-university"></i></span>
-
-                    <div class="info-box-content">
-                        <span class="info-box-text">Colleges</span>
-                        <span class="info-box-number">{{$college->count()}}</span>
-                    </div>
-                    <!-- /.info-box-content -->
-                </div>
-                <!-- /.info-box -->
-            </div>
-            
-
         </div>
+    </div>
+</div>
+
+        
 
 
 
 
-    </section>
+  
     <!-- /.content -->
 @endsection
