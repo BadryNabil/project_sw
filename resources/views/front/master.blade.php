@@ -64,8 +64,8 @@
                         <a class="nav-link selected" href="{{url('/')}}">Home</a>
                     </li>
                     @if(\Auth::check())
-                    <li class="nav-item">
-                        <a class="nav-link"  href="">Colleges</a>
+                   <li class="nav-item">
+                        <a class="nav-link"  href="{{url('collegesAll')}}">Colleges</a>
                     </li>
                       <li class="nav-item">
                         <a class="nav-link" href="">Predict</a>
@@ -109,7 +109,7 @@
                         <a href="{{url('/')}}">
                             <li>Home</li>
                         </a>
-                          <a href="">
+                          <a href="{{url('collegesAll')}}">
                             <li>Colleges</li>
                         </a>
                         <a href=" ">

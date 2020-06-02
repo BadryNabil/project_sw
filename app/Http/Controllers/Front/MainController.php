@@ -23,6 +23,21 @@ class MainController extends Controller
       return view('front.signin');
     }
 
+    public function CollegesAll()
+    {
+      $colleges = College::all();
+      return view('front.Colleges' , compact('colleges'));
+
+    }
+
+
+    public  function detailCollege($id)
+    {
+      $college = College::find($id);
+      $colleges = College::take(9)->get();
+      return view('front.college' , compact(['college','colleges']) );
+    }
+
 
     
 }

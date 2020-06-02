@@ -14,9 +14,8 @@
 Route::group(['namespace' => 'Front'] ,function(){
   Route::get('/','MainController@home');
     Route::get('signin','MainController@signin');
-
-  
-
+    Route::get('collegesAll','MainController@collegesAll');
+    Route::get('college/{id}','MainController@detailCollege');
 
 });
 

@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @inject('student','App\Student')
 @inject('college','App\College')
+@inject('feedback','App\Contact')
 
 
 @section('page_title')
@@ -50,7 +51,7 @@
                                   <div class="small-box bg-red">
                                     <div class="inner">
                                         <h3>FeedBack</h3>
-                                        <p>{{$college->count()}}</p>
+                                        <p>{{$feedback->count()}}</p>
                                     </div>
                                     <div class="icon">
                                       <i class="fa fa-envelope"></i>
