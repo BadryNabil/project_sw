@@ -5,7 +5,9 @@ Student
 @section('content')
 <!-- Content Header (Page header) -->
 
-
+@if (Session::has('sucssed'))
+        <li class="alert alert-info sucssed" role="alert" style="text-align: center;list-style: none;width:auto;margin-bottom:5px" >{{Session::get('sucssed')}}</li>
+@endif
 
 
 <!-- Main content -->
@@ -74,4 +76,11 @@ Student
 <!-- /.content -->
 
 
+@endsection
+@section('js')
+  <script type="text/javascript">
+  setTimeout(function() {
+  $('.sucssed').hide()
+}, 4000);
+</script>
 @endsection

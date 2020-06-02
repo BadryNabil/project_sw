@@ -348,6 +348,10 @@
     $('.sidebar-menu').tree()
   })
 </script>
+
+@yield('js')
+
+
 @stack('scripts')
 </body>
 </html>

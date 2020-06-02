@@ -63,7 +63,7 @@
                     <li class="nav-item">
                         <a class="nav-link selected" href="{{url('/')}}">Home</a>
                     </li>
-                    
+                    @if(\Auth::check())
                     <li class="nav-item">
                         <a class="nav-link"  href="">Colleges</a>
                     </li>
@@ -76,10 +76,10 @@
                     <li class="nav-item">
                         <a class="nav-link" href="">About App</a>
                     </li>
-                   
+                   @endif
             </ul>
 
-            <a href="">  <button class="btn login"  >NEW ACCOUNT</button></a>
+            <a href="{{url('signin')}}">  <button class="btn login"  >NEW ACCOUNT</button></a>
             <a href="">  <button class="btn login"  >LOGIN</button></a>
             <a href="{{url('/home')}}">  <button class="btn login"  >LOGIN AS ADMIN</button></a>
 
@@ -87,6 +87,9 @@
         </nav>
     </section>
     <!-- Content Start -->
+    @if (Session::has('error'))
+        <li class="alert alert-danger error" role="alert" style="text-align: center;list-style: none;width:auto;margin-bottom:5px" >{{Session::get('error')}}</li>
+    @endif
     @yield('content')
     <!-- Content End -->
 
@@ -148,6 +151,12 @@
     <script type="text/javascript" src="{{asset('front/js/swiper.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('front/js/wow.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('front/js/main.js')}}"></script>
+    <script type="text/javascript"> 
+          setTimeout(function() {
+          $('.error').hide()
+        }, 4000);
+      </script>
+    @yield('js')
 </body>
 
 </html>

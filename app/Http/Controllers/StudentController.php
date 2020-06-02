@@ -87,6 +87,6 @@ class StudentController extends Controller
     {
         $record=Student::findOrFail($id);
         $record->delete();
-        return back();
+        return back()->with('sucssed','Deleted');
     }
 }

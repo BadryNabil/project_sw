@@ -18,6 +18,11 @@ class MainController extends Controller
 
 	}
     
+    public function signin()
+    {
+      return view('front.signin');
+    }
+
 
     
 }
