@@ -74,7 +74,7 @@
                         <a class="nav-link" href="{{url('feedback')}}">FeedBack</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">About App</a>
+                        <a class="nav-link" href="{{url('aboutApp')}}">About App</a>
                     </li>
                    @endif
             </ul>
@@ -118,7 +118,7 @@
                         <a href="{{url('feedback')}}">
                             <li>FeedBack</li>
                         </a>
-                        <a href="">
+                        <a href="{{url('aboutApp')}}">
                             <li>About App</li>
                         </a>
                        </a>

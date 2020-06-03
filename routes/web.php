@@ -17,6 +17,7 @@ Route::group(['namespace' => 'Front'] ,function(){
     Route::get('collegesAll','MainController@collegesAll');
     Route::get('college/{id}','MainController@detailCollege');
   	Route::get('feedback','MainController@feedback');
+  	Route::get('aboutApp','MainController@aboutApp');
 
 });
 
