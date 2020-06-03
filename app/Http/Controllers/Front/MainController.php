@@ -37,7 +37,12 @@ class MainController extends Controller
       $colleges = College::take(9)->get();
       return view('front.college' , compact(['college','colleges']) );
     }
+   
 
+    public function feedback()
+    {
+      return view('front.feedback');
+    }
 
     
 }

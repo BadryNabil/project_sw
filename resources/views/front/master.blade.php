@@ -71,7 +71,7 @@
                         <a class="nav-link" href="">Predict</a>
                     </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="">FeedBack</a>
+                        <a class="nav-link" href="{{url('feedback')}}">FeedBack</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="">About App</a>
@@ -115,7 +115,7 @@
                         <a href=" ">
                             <li>Predict</li>
                         </a>
-                        <a href="">
+                        <a href="{{url('feedback')}}">
                             <li>FeedBack</li>
                         </a>
                         <a href="">
