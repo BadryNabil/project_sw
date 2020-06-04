@@ -12,16 +12,20 @@
 */
 
 Route::group(['namespace' => 'Front'] ,function(){
-  Route::get('/','MainController@home');
-    Route::get('signin','MainController@signin');
-    Route::get('collegesAll','MainController@collegesAll');
-    Route::get('college/{id}','MainController@detailCollege');
-  	Route::get('feedback','MainController@feedback');
-  	Route::get('aboutApp','MainController@aboutApp');
+  Route::get('/','MainController@log');
+  Route::get('signin','MainController@signin');
+  Route::get('collegesAll','MainController@collegesAll');
+  Route::get('college/{id}','MainController@detailCollege');
+  Route::get('feedback','MainController@feedback');
+  Route::get('aboutApp','MainController@aboutApp');
+  Route::get('project','MainController@home');
+
 
 });
 
 Route::post('register/user','AuthControllers@register');
+Route::post('login/user','AuthControllers@login');
+
 
 Route::get('logout',function () {
   auth()->guard()->logout();

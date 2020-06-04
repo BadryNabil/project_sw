@@ -22,6 +22,10 @@ class MainController extends Controller
     {
       return view('front.signin');
     }
+    public function log()
+    {
+      return view('front.log');
+    }
 
     public function CollegesAll()
     {

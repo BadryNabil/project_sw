@@ -14,12 +14,6 @@
     <section id="articles">
         <div class="container">
             <h2 style="display: inline-block;">Colleges</h2>
-
-            <!--  <form class="form-inline mr-auto" action="search" method="POST">
-                    @csrf
-                     <input class="form-control" type="text" name="input" id="input" placeholder="Search" aria-label="Search">
-                     <button class="btn blue-gradient btn-primary" type="submit">Search</button>
-                  </form>-->
             <div class="swiper-container">
             <div class="button-area" style="display: inline-block; margin-left: 850px;">
                     <div class="swiper-button-next"></div>
@@ -36,11 +30,9 @@
                             <div class="card-body">
                                 <h4 class="card-title">{{$college->name}}</h4>
                                 <p class="card-text">{{$college->body}}</p>
-                                @if(Auth::check())
                                 <div class="btn-cont">
                                    <a href="{{url('/college/'.$college->id)}}">  <button class="card-btn" >Details</button></a>
                                 </div>
-                                @endif
                             </div>
                         </div>
                     </div>

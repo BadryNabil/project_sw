@@ -60,24 +60,11 @@
             <img src="{{asset('front/imgs/logo.png')}}" width="18%"></img>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link selected" href="{{url('/')}}">Home</a>
-                    </li>
-                   <li class="nav-item">
-                        <a class="nav-link"  href="{{url('collegesAll')}}">Colleges</a>
-                    </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="">Predict</a>
-                    </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="{{url('feedback')}}">FeedBack</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{url('aboutApp')}}">About App</a>
-                    </li>
+                    
             </ul>
 
-            <a href="{{url('/')}}">  <button class="btn login"  >SignOut</button></a>
+            <a href="{{url('signin')}}">  <button class="btn login"  >NEW ACCOUNT</button></a>
+            <a href="{{url('/home')}}">  <button class="btn login"  >LOGIN AS ADMIN</button></a>
 
             </div>
         </nav>
@@ -86,9 +73,55 @@
     @if (Session::has('error'))
         <li class="alert alert-danger error" role="alert" style="text-align: center;list-style: none;width:auto;margin-bottom:5px" >{{Session::get('error')}}</li>
     @endif
-    @yield('content')
-    <!-- Content End -->
+<section id="navigator">
+        <div class="container">
+            <div class="path">
+                <div class="path-directio" style="color: grey; display:inline-block;">  Login</div>
+            </div>
 
+        </div>
+    </section>
+    <!-- Navigator End -->
+
+    <!-- Login Start -->
+
+     <section id="login">
+        <div class="container">
+            <img src="{{asset('front/imgs/logo.png')}}" alt="">
+                  <div class="col-md-12 info">
+                    <div class="box-body">
+                {!! Form::open([
+                'action' => 'AuthControllers@login',
+                'files'  => true,
+                'method' =>'post'
+
+                ]) !!}
+                @include('partials.validation_errors')
+
+                  <div class="form-group">
+                   
+                  
+                {!! Form::text('email',null,[
+                  'class' => 'form-control',
+                  'placeholder'=>'Email'
+                  ]) !!}
+                  <br>
+
+                  {!! Form::text('password',null, [
+                    'class'=>'form-control',
+                    'placeholder'=>'Password'
+                    ]) !!}
+                  
+                  </div>
+                  <div class="reg-group">
+                        <button style="background-color: darkred;">Login</button>
+                       
+                    </div>
+                  {!! Form::close () !!}
+            </div>
+            </div>
+        </div>
+    </section>
     <!-- Footer Start -->
     <section id="footer">
         <div class="container">
@@ -101,27 +134,6 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <ul class="menu">
-                        <a href="{{url('/')}}">
-                            <li>Home</li>
-                        </a>
-                          <a href="{{url('collegesAll')}}">
-                            <li>Colleges</li>
-                        </a>
-                        <a href=" ">
-                            <li>Predict</li>
-                        </a>
-                        <a href="{{url('feedback')}}">
-                            <li>FeedBack</li>
-                        </a>
-                        <a href="{{url('aboutApp')}}">
-                            <li>About App</li>
-                        </a>
-                       </a>
-                       
-                        
-                        
-                    </ul>
                     
                 </div>
                 <div class="col-md-4">
@@ -156,3 +168,5 @@
 </body>
 
 </html>
+
+   

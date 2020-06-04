@@ -39,7 +39,39 @@ class AuthControllers extends Controller
       $student=Student::create($request->all());
       $student->api_token=Str::random(60);
       $student->save();
-      return back()->with('error','Register Is Success');
+       return redirect('project');
+
+    }
+    public function login(Request $request)
+    {
+      $validator=validator()->make($request->all(),
+      [
+        'email'              =>'required',
+        'password'           =>'required',
+
+      ]);
+
+      if ($validator->fails())
+      {
+        return back()->with('error','Error Review your Data');
+      }
+
+      $student=Student::where('email',$request->email)->first();
+      if($student)
+      {
+        if (Hash::check($request->password,$student->password))
+         {
+             return redirect('project');
+        }
+        else
+        {
+          return back()->with('error',' Wrong Password ');
+        }
+        
+      }
+      else
+          return back()->with('error','Wrong Mail');
+
 
     }
         
