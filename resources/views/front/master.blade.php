@@ -66,8 +66,8 @@
                    <li class="nav-item">
                         <a class="nav-link"  href="{{url('collegesAll')}}">Colleges</a>
                     </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="">Predict</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url('predict')}}">Predict</a>
                     </li>
                      <li class="nav-item">
                         <a class="nav-link" href="{{url('feedback')}}">FeedBack</a>
@@ -108,7 +108,7 @@
                           <a href="{{url('collegesAll')}}">
                             <li>Colleges</li>
                         </a>
-                        <a href=" ">
+                        <a href="{{url('predict')}}">
                             <li>Predict</li>
                         </a>
                         <a href="{{url('feedback')}}">

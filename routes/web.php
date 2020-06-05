@@ -19,7 +19,8 @@ Route::group(['namespace' => 'Front'] ,function(){
   Route::get('feedback','MainController@feedback');
   Route::get('aboutApp','MainController@aboutApp');
   Route::get('project','MainController@home');
-
+  Route::post('search','MainController@search');
+  Route::get('predict','MainController@predict');
 
 });
 

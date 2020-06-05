@@ -17,6 +17,26 @@ class MainController extends Controller
         return view('front.home' , compact(['colleges','settings']));
 
 	}
+  public function search(Request $request)
+    {
+      $this->validate($request,[
+       'input' =>'required'
+      ]);
+      $input = $request->input;
+      $colleges = College::where('name' , 'like' , '%' . $input . '%')
+                        ->orWhere('grade' , '<=' ,  $input )->get();
+      if ($colleges)
+      {
+        return view('front.predict',compact('colleges'));
+      }
+
+    }
+    public function predict()
+    {
+      $colleges = College::all();
+      return view('front.predict' , compact('colleges'));
+       
+    }
     
     public function signin()
     {
