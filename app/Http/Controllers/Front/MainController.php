@@ -70,6 +70,13 @@ class MainController extends Controller
     {
       return view('front.feedback');
     }
+    public function clickPost($id)
+    {
+        $college = College::findorfail($id); 
+        $college->increment('student'); 
+        $college->update(); 
+        return back();
+    }   
 
     
 }

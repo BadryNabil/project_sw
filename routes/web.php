@@ -21,6 +21,7 @@ Route::group(['namespace' => 'Front'] ,function(){
   Route::get('project','MainController@home');
   Route::post('search','MainController@search');
   Route::get('predict','MainController@predict');
+  Route::get('collegeClick/{id}', 'MainController@clickPost');
 
 });
 

@@ -47,6 +47,7 @@
                         
                         <div class="col-lg-3 btn-group" style="padding-top: 0px;padding-bottom: -5px; padding-left: 60px ;">
                            <a href="{{url('/college/'.$college->id)}}"><button style="padding: 20px 20px 20px 20px; ">Details</button>  </a>
+                           <a href="{{url('/collegeClick/'.$college->id)}}"><button style="padding: 20px 20px 20px 20px; margin-left: 5px; " id="collegeClick">IWant</button>  </a>
                            <br> 
                            
                        </div>

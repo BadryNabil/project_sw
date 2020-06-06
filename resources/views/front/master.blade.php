@@ -61,7 +61,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link selected" href="{{url('/')}}">Home</a>
+                        <a class="nav-link selected" href="{{url('project')}}">Home</a>
                     </li>
                    <li class="nav-item">
                         <a class="nav-link"  href="{{url('collegesAll')}}">Colleges</a>
@@ -102,7 +102,7 @@
                 </div>
                 <div class="col-md-3">
                     <ul class="menu">
-                        <a href="{{url('/')}}">
+                        <a href="{{url('project')}}">
                             <li>Home</li>
                         </a>
                           <a href="{{url('collegesAll')}}">

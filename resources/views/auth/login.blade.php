@@ -77,7 +77,7 @@
 <section id="navigator">
         <div class="container">
             <div class="path">
-                <div class="path-directio" style="color: grey; display:inline-block;"> Sign up</div>
+                <div class="path-directio" style="color: grey; display:inline-block;">Login As Admin</div>
             </div>
 
         </div>
