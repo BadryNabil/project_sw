@@ -94,7 +94,6 @@
                 'action' => 'AuthControllers@login',
                 'files'  => true,
                 'method' =>'post'
-
                 ]) !!}
                 @include('partials.validation_errors')
 
@@ -168,5 +167,3 @@
 </body>
 
 </html>
-
-   

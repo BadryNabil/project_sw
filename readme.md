@@ -1,7 +1,8 @@
 To Run Project
+
 1- You Must open internet.
 
-2- git clone https://github.com/BadryNabil/project_sw.git
+2- git clone https://github.com/BadryNabil/project_sw.git or Download Project
 
 3- Open the console and cd your project root directory
 
