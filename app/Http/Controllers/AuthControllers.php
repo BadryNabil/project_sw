@@ -11,15 +11,7 @@ use Str;
 class AuthControllers extends Controller
 {
 
-  /*public function __construct()
-    {
-        if(! \Auth::check())
-        {
-          return redirect()->route('login');
-        }
-    }*/
- 
-    public function register(Request $request)
+  public function register(Request $request)
     {
       $validator=validator()->make($request->all(),
       [
@@ -28,8 +20,6 @@ class AuthControllers extends Controller
         'email'              =>'required|unique:student',
         'phone'              =>'required',
         'city'               =>'required',
-
-
       ]);
       if ($validator->fails())
       {
@@ -40,7 +30,6 @@ class AuthControllers extends Controller
       $student->api_token=Str::random(60);
       $student->save();
        return redirect('project');
-
     }
     public function login(Request $request)
     {
@@ -48,14 +37,11 @@ class AuthControllers extends Controller
       [
         'email'              =>'required',
         'password'           =>'required',
-
       ]);
-
       if ($validator->fails())
       {
         return back()->with('error','Error Review your Data');
       }
-
       $student=Student::where('email',$request->email)->first();
       if($student)
       {
@@ -67,7 +53,6 @@ class AuthControllers extends Controller
         {
           return back()->with('error',' Wrong Password ');
         }
-        
       }
       else
           return back()->with('error','Wrong Mail');

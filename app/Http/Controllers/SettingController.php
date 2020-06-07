@@ -16,17 +16,8 @@ class SettingController extends Controller
     public function index()
     {
        
-        
-            $model = Setting::find(1);
-            
-        
+        $model = Setting::find(1);
         return view('settings.index', compact('model'));
-    }
-
-
-    public function edit($id)
-    {
-
     }
 
     public function update(Request $request)
