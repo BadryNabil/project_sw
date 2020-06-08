@@ -29,11 +29,11 @@
                 <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <i class="fas fa-phone-volume" style="border-right: 1px solid gray;"> {{$settings->phone}}
+                            <i class="fas fa-phone-volume" style="border-right: 1px solid gray;"> 01153328857
                                 &nbsp; &nbsp; </i>
                         </li>
                         <li class="nav-item">
-                            <i class="far fa-envelope" style="padding-left: 15px;"> {{$settings->email}}</i>
+                            <i class="far fa-envelope" style="padding-left: 15px;"> college7@gmail.com</i>
                         </li>
                     </ul>
                 </div>
@@ -135,7 +135,7 @@
                         <li>
                             <h5>Available On</h5>
                         </li>
-                        <li> <a  href="{{$settings->app_store_link}}"><img src="{{asset('front/imgs/ios1.png')}}" alt=""></li>
+                        <li> <a  href="https://www.apple.com/ios/app-store/"><img src="{{asset('front/imgs/ios1.png')}}" alt=""></li>
                         <li><img src="{{asset('front/imgs/google1.png')}}" alt=""></li>
 
                     </ul>

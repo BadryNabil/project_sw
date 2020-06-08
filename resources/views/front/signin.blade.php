@@ -27,6 +27,7 @@
         <nav class="navbar navbar-expand-md navbar-dark bg-dark">
             <div class="container">
                 <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+                    @foreach($settings as $settings)
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
                             <i class="fas fa-phone-volume" style="border-right: 1px solid gray;"> {{$settings->phone}}
@@ -36,6 +37,7 @@
                             <i class="far fa-envelope" style="padding-left: 15px;"> {{$settings->email}}</i>
                         </li>
                     </ul>
+                    @endforeach
                 </div>
                 <div class="mx-auto order-0 navbar-brand mx-auto">
                     <a href="https://www.facebook.com/badry.nabil.9"><i
@@ -156,7 +158,7 @@
                         <li>
                             <h5>Available On</h5>
                         </li>
-                        <li> <a  href="{{$settings->app_store_link}}"><img src="{{asset('front/imgs/ios1.png')}}" alt=""></li>
+                        <li> <a  href="https://www.apple.com/ios/app-store/"><img src="{{asset('front/imgs/ios1.png')}}" alt=""></li>
                         <li><img src="{{asset('front/imgs/google1.png')}}" alt=""></li>
 
                     </ul>

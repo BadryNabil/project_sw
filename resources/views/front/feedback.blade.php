@@ -19,6 +19,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 call">
+                  @foreach($settings as $settings)
                     <div class="title">INFO</div>
                     <img src="{{asset('front/imgs/logo.png')}}" alt="">
                     <hr>
@@ -31,11 +32,9 @@
                                     <a href="https://www.facebook.com/badry.nabil.9"><i class="fab fa-facebook-square fa-3x"></i></a>
                                     <a href="https://api.whatsapp.com/send?phone=+201153328857"><i class="fab fa-whatsapp-square fa-3x"></i></a>
                                     <a href="https://www.facebook.com/badry.nabil.9">   <i class="fab fa-google-plus-square fa-3x"></i></a>
-                                 
-                                    
-                                    
-                                </div>
-                </div>
+                                  </div>
+                    </div>
+                    @endforeach
                 
                 <div class="col-md-6 info">
                     <div class="title">FeedBack</div>

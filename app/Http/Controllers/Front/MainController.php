@@ -40,11 +40,15 @@ class MainController extends Controller
     
     public function signin()
     {
-      return view('front.signin');
+      $settings = Setting::all();
+      return view('front.signin', compact('settings'));
+
     }
     public function log()
     {
-      return view('front.log');
+      $settings = Setting::all();
+      return view('front.log', compact('settings'));
+
     }
 
     public function CollegesAll()
@@ -63,12 +67,15 @@ class MainController extends Controller
     }
     public function aboutApp()
     {
-      return view('front.about');
+      $settings = Setting::all();
+      return view('front.about' , compact('settings'));
+
     }
 
     public function feedback()
     {
-      return view('front.feedback');
+    $settings = Setting::all();
+    return view('front.feedback', compact('settings'));
     }
     public function clickPost($id)
     {

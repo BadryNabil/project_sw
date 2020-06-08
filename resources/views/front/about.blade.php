@@ -15,7 +15,9 @@
     <section id="who">
         <div class="container">
                 <img src="{{asset('front/imgs/logo.png')}}" alt="">
+                @foreach($settings as $settings)
                 <p>{{$settings->about_app}}</p>
+                @endforeach
         </div>
     </section>
     <!-- Who End -->
