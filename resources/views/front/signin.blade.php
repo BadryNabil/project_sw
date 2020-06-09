@@ -109,15 +109,18 @@
                   'placeholder'=>'Name'
                   ]) !!}
 
-                  {!! Form::text('password',null, [
-                    'class'=>'form-control',
-                    'placeholder'=>'Password'
-                    ]) !!}
-                  
-                    {!! Form::text('email',null, [
+                 {!! Form::text('email',null, [
                     'class'=>'form-control',
                     'placeholder'=>'Email'
                     ]) !!}
+                    
+                  {!! Form::text('password',null, [
+                    'class'=>'form-control',
+                    'placeholder'=>'Password:Must Be 8 Digits'
+
+                    ]) !!}
+                  
+                   
                   
                   {!! Form::text('phone',null,[
                   'class' => 'form-control',

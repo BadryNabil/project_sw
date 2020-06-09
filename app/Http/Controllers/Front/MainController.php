@@ -82,7 +82,7 @@ class MainController extends Controller
         $college = College::findorfail($id); 
         $college->increment('student'); 
         $college->update(); 
-        return back();
+        return redirect('predict');
     }   
 
     
