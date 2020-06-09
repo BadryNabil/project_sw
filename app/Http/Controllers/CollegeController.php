@@ -7,6 +7,10 @@ use Image;
 
 class CollegeController extends Controller
 {
+  public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
      $records=College::paginate(20);
